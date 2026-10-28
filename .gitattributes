@@ -1,0 +1,7 @@
+# Preserve exact bytes: CSV evidence contains original CRLF line endings.
+# Shell and Python files are already stored with LF line endings.
+# Avoid checkout normalization invalidating source_manifest / SHA256SUMS.
+* -text
+*.npz binary
+*.pdf binary
+*.png binary

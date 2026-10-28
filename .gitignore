@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+tmp/
+retrained/
+final_project/diff_drive_smoke/results/
+*.mp4
+*.log
+*.zip
