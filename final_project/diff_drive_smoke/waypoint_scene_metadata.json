@@ -1,0 +1,33 @@
+{
+  "render_engine": "ogre2",
+  "route": {
+    "name": "four_points_axle_v2",
+    "start": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "goals": [
+      [
+        1.5,
+        0.0
+      ],
+      [
+        1.5,
+        1.5
+      ],
+      [
+        0.0,
+        1.5
+      ],
+      [
+        0.0,
+        3.0
+      ]
+    ],
+    "goal_reference": "wheel_axle_center"
+  },
+  "marker_radius_m": 0.25,
+  "marker_collision": false,
+  "source_world": "world.sdf"
+}

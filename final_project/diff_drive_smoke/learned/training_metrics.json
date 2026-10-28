@@ -1,0 +1,239 @@
+{
+  "teacher": "Analytic rule-based teacher, not human demonstrations",
+  "architecture": [
+    2,
+    32,
+    32,
+    2
+  ],
+  "parameters": 1218,
+  "input": [
+    "distance / 5 (clipped to 5 m)",
+    "wrapped target bearing error / pi"
+  ],
+  "output": [
+    "linear speed / 0.35",
+    "angular speed / 0.8"
+  ],
+  "training_seed": 42,
+  "validation_seed": 43,
+  "training_states": 24000,
+  "validation_states": 6000,
+  "steps": 1800,
+  "batch_size": 512,
+  "learning_rate": 0.002,
+  "torch_version": "2.6.0+cu124",
+  "training_wall_seconds": 7.690045436960645,
+  "numpy_export_max_error": 4.3213367462158203e-07,
+  "validation_mae_v_mps": 0.007062006621661665,
+  "validation_mae_w_radps": 0.004081231404934079,
+  "inference_ms_p50": 0.07588,
+  "inference_ms_p95": 0.19720349999999998,
+  "goal_radius_m": 0.2,
+  "kinematic_successes": 20,
+  "kinematic_trials": 20,
+  "kinematic_rollouts": [
+    {
+      "scenario": 0,
+      "goal": [
+        1.944500655145065,
+        1.6206151946373493
+      ],
+      "final_distance_m": 0.18010664979153512,
+      "sim_seconds": 10.0,
+      "success": true
+    },
+    {
+      "scenario": 1,
+      "goal": [
+        1.7476804640227284,
+        2.47327542313001
+      ],
+      "final_distance_m": 0.19684888193972386,
+      "sim_seconds": 9.9,
+      "success": true
+    },
+    {
+      "scenario": 2,
+      "goal": [
+        3.5253812286285684,
+        -1.8586234073104817
+      ],
+      "final_distance_m": 0.18353095086710783,
+      "sim_seconds": 14.100000000000001,
+      "success": true
+    },
+    {
+      "scenario": 3,
+      "goal": [
+        -2.9496505160926367,
+        -2.4750491499172846
+      ],
+      "final_distance_m": 0.18472312299561908,
+      "sim_seconds": 11.9,
+      "success": true
+    },
+    {
+      "scenario": 4,
+      "goal": [
+        3.6049000235792628,
+        -0.47828349840118584
+      ],
+      "final_distance_m": 0.18719889543044374,
+      "sim_seconds": 12.600000000000001,
+      "success": true
+    },
+    {
+      "scenario": 5,
+      "goal": [
+        -1.0568413231441194,
+        -3.772479181241787
+      ],
+      "final_distance_m": 0.1910246914876845,
+      "sim_seconds": 13.700000000000001,
+      "success": true
+    },
+    {
+      "scenario": 6,
+      "goal": [
+        1.8280022821871367,
+        1.5884082968661561
+      ],
+      "final_distance_m": 0.18399937416149573,
+      "sim_seconds": 7.9,
+      "success": true
+    },
+    {
+      "scenario": 7,
+      "goal": [
+        0.4634994448585088,
+        2.0681556776830834
+      ],
+      "final_distance_m": 0.1950322700926047,
+      "sim_seconds": 7.4,
+      "success": true
+    },
+    {
+      "scenario": 8,
+      "goal": [
+        -0.7146994531452094,
+        2.0833728513487464
+      ],
+      "final_distance_m": 0.1812854887397598,
+      "sim_seconds": 7.300000000000001,
+      "success": true
+    },
+    {
+      "scenario": 9,
+      "goal": [
+        3.8155009112300426,
+        -1.0961055881787003
+      ],
+      "final_distance_m": 0.19192404872831048,
+      "sim_seconds": 14.8,
+      "success": true
+    },
+    {
+      "scenario": 10,
+      "goal": [
+        -3.142582729798114,
+        -2.203940179813346
+      ],
+      "final_distance_m": 0.18730810170516302,
+      "sim_seconds": 11.9,
+      "success": true
+    },
+    {
+      "scenario": 11,
+      "goal": [
+        -2.191419515641657,
+        -0.7054483006158065
+      ],
+      "final_distance_m": 0.1816635240214094,
+      "sim_seconds": 7.6000000000000005,
+      "success": true
+    },
+    {
+      "scenario": 12,
+      "goal": [
+        0.24384263058689093,
+        -1.7847111778621967
+      ],
+      "final_distance_m": 0.1981614857715669,
+      "sim_seconds": 9.0,
+      "success": true
+    },
+    {
+      "scenario": 13,
+      "goal": [
+        -0.5547944861597394,
+        1.607156040662986
+      ],
+      "final_distance_m": 0.19657688784068963,
+      "sim_seconds": 8.200000000000001,
+      "success": true
+    },
+    {
+      "scenario": 14,
+      "goal": [
+        -0.11862910509257286,
+        -1.5967716754647114
+      ],
+      "final_distance_m": 0.18023202784170317,
+      "sim_seconds": 8.3,
+      "success": true
+    },
+    {
+      "scenario": 15,
+      "goal": [
+        0.9217160040066734,
+        -2.668502690715746
+      ],
+      "final_distance_m": 0.1960201542552156,
+      "sim_seconds": 8.9,
+      "success": true
+    },
+    {
+      "scenario": 16,
+      "goal": [
+        1.8485667290188827,
+        1.5300764079227485
+      ],
+      "final_distance_m": 0.19360423097197876,
+      "sim_seconds": 8.200000000000001,
+      "success": true
+    },
+    {
+      "scenario": 17,
+      "goal": [
+        -1.3772305160097897,
+        2.655747598280785
+      ],
+      "final_distance_m": 0.17941914569761377,
+      "sim_seconds": 9.4,
+      "success": true
+    },
+    {
+      "scenario": 18,
+      "goal": [
+        3.4912235197447123,
+        -0.1924473052652643
+      ],
+      "final_distance_m": 0.18348118016094414,
+      "sim_seconds": 13.8,
+      "success": true
+    },
+    {
+      "scenario": 19,
+      "goal": [
+        -0.8700123007670082,
+        -1.9508953010386902
+      ],
+      "final_distance_m": 0.1854993607887108,
+      "sim_seconds": 9.1,
+      "success": true
+    }
+  ],
+  "model_sha256": "fa0ba22da8d10f839862cd06157fed283af6209e72b5f6b9bb2e7b2b2887a6b4",
+  "limits": "Obstacle-free planar kinematics only. Gazebo trials required. Goal threshold and stopping are explicit supervisory logic, not learned."
+}

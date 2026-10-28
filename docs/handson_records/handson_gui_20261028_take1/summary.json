@@ -1,0 +1,173 @@
+{
+  "protocol": {
+    "route": {
+      "name": "four_points_axle_v2",
+      "start": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "goals": [
+        [
+          1.5,
+          0.0
+        ],
+        [
+          1.5,
+          1.5
+        ],
+        [
+          0.0,
+          1.5
+        ],
+        [
+          0.0,
+          3.0
+        ]
+      ],
+      "goal_reference": "wheel_axle_center"
+    },
+    "criteria": {
+      "switch_radius_m": 0.2,
+      "true_goal_radius_m": 0.25,
+      "stop_hold_sim_seconds": 1.0,
+      "max_final_linear_mps": 0.03,
+      "max_final_angular_radps": 0.03,
+      "max_sim_seconds": 120.0,
+      "max_wall_seconds": 360.0,
+      "control_period_sim_seconds": 0.1
+    },
+    "observation": "aligned_wheel_axle_odometry",
+    "model_sha256": "fa0ba22da8d10f839862cd06157fed283af6209e72b5f6b9bb2e7b2b2887a6b4",
+    "world_sha256": "f61b910eaae48e95cbf85148b234071d6cc0c96ef7d1ad7fe0407d1b8ae676f6",
+    "simulator_processes": [
+      {
+        "name": "gazebo",
+        "pid": 1577,
+        "start_ticks": "17295067",
+        "headless": true,
+        "waypoints": true
+      },
+      {
+        "name": "bridge",
+        "pid": 1578,
+        "start_ticks": "17295068",
+        "headless": true,
+        "waypoints": true
+      }
+    ],
+    "ai": "Saved PyTorch-trained neural policy, NumPy inference; linear m/s and angular rad/s velocity",
+    "non_ai": [
+      "one initial pose reset/alignment",
+      "ordered waypoint switching",
+      "final stop",
+      "speed limits",
+      "watchdogs"
+    ],
+    "evaluation": "Gazebo model pose transformed to wheel axle centre at each transition and after final stop",
+    "limits": "One declared route, no obstacles. Separate task from single-goal trials."
+  },
+  "result": {
+    "success": true,
+    "error": null,
+    "route": {
+      "name": "four_points_axle_v2",
+      "start": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "goals": [
+        [
+          1.5,
+          0.0
+        ],
+        [
+          1.5,
+          1.5
+        ],
+        [
+          0.0,
+          1.5
+        ],
+        [
+          0.0,
+          3.0
+        ]
+      ],
+      "goal_reference": "wheel_axle_center"
+    },
+    "visits": [
+      {
+        "point": 1,
+        "goal": [
+          1.5,
+          0.0
+        ],
+        "sim_seconds": 3.245999999999981,
+        "wall_seconds": 9.191853479016572,
+        "estimated_distance_m": 0.19489701691268507,
+        "true_distance_m": 0.19489669907652657,
+        "true_xy": [
+          1.305103800989589,
+          -0.00044149996650546256
+        ]
+      },
+      {
+        "point": 2,
+        "goal": [
+          1.5,
+          1.5
+        ],
+        "sim_seconds": 10.009999999999991,
+        "wall_seconds": 32.73563778901007,
+        "estimated_distance_m": 0.1937158910787918,
+        "true_distance_m": 0.19393231082854961,
+        "true_xy": [
+          1.496859759736424,
+          1.3060931149381534
+        ]
+      },
+      {
+        "point": 3,
+        "goal": [
+          0.0,
+          1.5
+        ],
+        "sim_seconds": 16.875,
+        "wall_seconds": 59.38640158501221,
+        "estimated_distance_m": 0.18063151577667286,
+        "true_distance_m": 0.18079493358397408,
+        "true_xy": [
+          0.18077468361800586,
+          1.4972941226111507
+        ]
+      },
+      {
+        "point": 4,
+        "goal": [
+          0.0,
+          3.0
+        ],
+        "sim_seconds": 23.640999999999963,
+        "wall_seconds": 90.28352322801948,
+        "estimated_distance_m": 0.19437187252580854,
+        "true_distance_m": 0.19475738513487037,
+        "true_xy": [
+          0.0006165398230134555,
+          2.805243590751886
+        ]
+      }
+    ],
+    "hold_complete": true,
+    "final_true_distance_m": 0.16846523208689987,
+    "final_odom_linear_mps": 0.0,
+    "final_odom_angular_radps": 0.0,
+    "sim_seconds": 24.658999999999992,
+    "wall_seconds": 93.36761088101775,
+    "motion_start_unix": 1793192525.0630145,
+    "inference_calls": 234,
+    "inference_ms_mean": 0.9923324444444448,
+    "inference_ms_max": 61.925054
+  }
+}

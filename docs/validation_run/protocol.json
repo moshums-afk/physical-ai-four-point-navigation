@@ -1,0 +1,68 @@
+{
+  "route": {
+    "name": "four_points_axle_v2",
+    "start": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "goals": [
+      [
+        1.5,
+        0.0
+      ],
+      [
+        1.5,
+        1.5
+      ],
+      [
+        0.0,
+        1.5
+      ],
+      [
+        0.0,
+        3.0
+      ]
+    ],
+    "goal_reference": "wheel_axle_center"
+  },
+  "criteria": {
+    "switch_radius_m": 0.2,
+    "true_goal_radius_m": 0.25,
+    "stop_hold_sim_seconds": 1.0,
+    "max_final_linear_mps": 0.03,
+    "max_final_angular_radps": 0.03,
+    "max_sim_seconds": 120.0,
+    "max_wall_seconds": 360.0,
+    "control_period_sim_seconds": 0.1
+  },
+  "observation": "aligned_wheel_axle_odometry",
+  "model_sha256": "fa0ba22da8d10f839862cd06157fed283af6209e72b5f6b9bb2e7b2b2887a6b4",
+  "world_sha256": "f61b910eaae48e95cbf85148b234071d6cc0c96ef7d1ad7fe0407d1b8ae676f6",
+  "simulator_processes": [
+    {
+      "name": "gazebo",
+      "pid": 59,
+      "start_ticks": "4436321",
+      "headless": true,
+      "waypoints": true
+    },
+    {
+      "name": "bridge",
+      "pid": 60,
+      "start_ticks": "4436322",
+      "headless": true,
+      "waypoints": true
+    }
+  ],
+  "ai": "Saved PyTorch-trained neural policy, NumPy inference; linear m/s and angular rad/s velocity",
+  "non_ai": [
+    "one initial pose reset/alignment",
+    "ordered waypoint switching",
+    "final stop",
+    "speed limits",
+    "watchdogs"
+  ],
+  "evaluation": "Gazebo model pose transformed to wheel axle centre at each transition and after final stop",
+  "limits": "One declared route, no obstacles. Separate task from single-goal trials."
+}

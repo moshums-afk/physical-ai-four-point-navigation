@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-29",
+  "executed_by": "author with stepwise guidance",
+  "model_sha256": "fa0ba22da8d10f839862cd06157fed283af6209e72b5f6b9bb2e7b2b2887a6b4",
+  "same_model_bytes": true,
+  "same_teacher_arrays": true,
+  "original_model_preserved": true,
+  "training_states": 24000,
+  "validation_states": 6000,
+  "steps": 1800,
+  "training_wall_seconds": 11.46733056200901,
+  "numpy_export_max_error": 4.3213367462158203e-07,
+  "kinematic_results_are_not_gazebo_trials": true
+}

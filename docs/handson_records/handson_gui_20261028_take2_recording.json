@@ -1,0 +1,57 @@
+{
+  "capture_size": "981x584",
+  "video_size": "982x584",
+  "padding_right_bottom_pixels": [
+    1,
+    0
+  ],
+  "recording_success": true,
+  "frame_rate": 15,
+  "render_scene": {
+    "render_engine": "ogre2",
+    "route": {
+      "name": "four_points_axle_v2",
+      "start": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "goals": [
+        [
+          1.5,
+          0.0
+        ],
+        [
+          1.5,
+          1.5
+        ],
+        [
+          0.0,
+          1.5
+        ],
+        [
+          0.0,
+          3.0
+        ]
+      ],
+      "goal_reference": "wheel_axle_center"
+    },
+    "marker_radius_m": 0.25,
+    "marker_collision": false,
+    "source_world": "world.sdf"
+  },
+  "learned": true,
+  "waypoints": true,
+  "purpose": "Continuous four-point learned-policy demonstration",
+  "capture_launch_unix": 1793193468.4692125,
+  "controller_launch_unix": 1793193469.4800866,
+  "recorder_exit_code": 255,
+  "controller_exit_code": 0,
+  "video_validation": {
+    "codec": "h264",
+    "width": 982,
+    "height": 584,
+    "duration_seconds": 132.136,
+    "bytes": 5397391
+  }
+}

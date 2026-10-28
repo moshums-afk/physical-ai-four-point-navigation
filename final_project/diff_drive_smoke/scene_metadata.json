@@ -1,0 +1,7 @@
+{
+  "render_engine": "ogre2",
+  "physics_step_seconds": 0.001,
+  "shadows": false,
+  "vehicles": 1,
+  "evaluation_pose_frequency_hz": 20
+}
