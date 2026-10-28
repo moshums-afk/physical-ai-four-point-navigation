@@ -1,0 +1,42 @@
+{
+  "video_size": "1920x1080",
+  "frame_rate": 15,
+  "render_scene": {
+    "render_engine": "ogre2",
+    "route": {
+      "name": "four_points_axle_v2",
+      "start": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "goals": [
+        [
+          1.5,
+          0.0
+        ],
+        [
+          1.5,
+          1.5
+        ],
+        [
+          0.0,
+          1.5
+        ],
+        [
+          0.0,
+          3.0
+        ]
+      ],
+      "goal_reference": "wheel_axle_center"
+    },
+    "marker_radius_m": 0.25,
+    "marker_collision": false,
+    "source_world": "world.sdf"
+  },
+  "learned": true,
+  "waypoints": true,
+  "purpose": "Continuous four-point learned-policy demonstration",
+  "capture_launch_unix": 1793020891.2470508,
+  "controller_launch_unix": 1793020892.2602053
+}

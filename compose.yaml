@@ -1,0 +1,14 @@
+name: physical-ai-four-points
+services:
+  ros:
+    image: airobotbook/ros2-desktop-ai-robot-book-humble@sha256:b58ec74c019aacd9ce4818fa25fc5a9e0a1f22f8c9cd1f5260994bf15cd9eb63
+    ports:
+      - "127.0.0.1:6082:80"
+    shm_size: "512m"
+    environment:
+      ROS_DOMAIN_ID: "52"
+      ROS_LOCALHOST_ONLY: "1"
+      PYTHONDONTWRITEBYTECODE: "1"
+      WANDB_MODE: offline
+    volumes:
+      - .:/workspace

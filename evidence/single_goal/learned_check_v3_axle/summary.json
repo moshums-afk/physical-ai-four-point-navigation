@@ -1,0 +1,187 @@
+{
+  "protocol": {
+    "criteria": {
+      "true_goal_radius_m": 0.25,
+      "controller_stop_radius_m": 0.2,
+      "max_final_linear_mps": 0.03,
+      "max_final_angular_radps": 0.03,
+      "max_sim_seconds": 45.0,
+      "max_wall_seconds": 180.0,
+      "stop_hold_sim_seconds": 1.0,
+      "control_period_sim_seconds": 0.1
+    },
+    "trials": [
+      {
+        "name": "check_a",
+        "start": [
+          0.5,
+          1.5,
+          -1.2
+        ],
+        "goal": [
+          3.0,
+          2.0
+        ]
+      },
+      {
+        "name": "check_b",
+        "start": [
+          2.8,
+          -0.5,
+          2.8
+        ],
+        "goal": [
+          3.0,
+          2.0
+        ]
+      },
+      {
+        "name": "check_c",
+        "start": [
+          0.7,
+          0.2,
+          -2.1
+        ],
+        "goal": [
+          3.0,
+          2.0
+        ]
+      }
+    ],
+    "suite": "check",
+    "observation": "odometry_axle",
+    "axle_center_in_model_xy_m": [
+      0.5542825,
+      0.0
+    ],
+    "simulator_processes": [
+      {
+        "name": "gazebo",
+        "pid": 3867,
+        "start_ticks": "108730048",
+        "headless": true
+      },
+      {
+        "name": "bridge",
+        "pid": 3868,
+        "start_ticks": "108730049",
+        "headless": true
+      }
+    ],
+    "model_sha256": "fa0ba22da8d10f839862cd06157fed283af6209e72b5f6b9bb2e7b2b2887a6b4",
+    "control": "Learned velocity policy using odometry_axle",
+    "evaluation": "Gazebo model pose distance. In sim_pose mode this is also the control observation; perfect simulated localization is assumed.",
+    "non_ai": [
+      "pose setup",
+      "odometry alignment",
+      "speed bounds",
+      "goal threshold",
+      "stop hold",
+      "watchdogs"
+    ],
+    "limits": "3 designed starts, one goal, no obstacles. Not evidence of broad navigation generalization."
+  },
+  "results": [
+    {
+      "name": "check_a",
+      "start": [
+        0.5,
+        1.5,
+        -1.2
+      ],
+      "goal": [
+        3.0,
+        2.0
+      ],
+      "observation": "odometry_axle",
+      "success": true,
+      "error": null,
+      "final_true_distance_m": 0.1699647424371066,
+      "final_odom_linear_mps": 0.0,
+      "final_odom_angular_radps": 0.0,
+      "sim_seconds": 12.430999999999997,
+      "wall_seconds": 26.65361044695601,
+      "inference_calls": 114,
+      "inference_ms_mean": 0.6691464035087717,
+      "inference_ms_max": 6.264228,
+      "origin_odom": [
+        0.5213359913519424,
+        3.940788680430057,
+        -2.714418497003553
+      ],
+      "origin_truth": [
+        0.4999998712389101,
+        1.5000003311938954,
+        -1.1999999999999946
+      ]
+    },
+    {
+      "name": "check_b",
+      "start": [
+        2.8,
+        -0.5,
+        2.8
+      ],
+      "goal": [
+        3.0,
+        2.0
+      ],
+      "observation": "odometry_axle",
+      "success": true,
+      "error": null,
+      "final_true_distance_m": 0.1620606058654698,
+      "final_odom_linear_mps": 0.0,
+      "final_odom_angular_radps": 0.0,
+      "sim_seconds": 12.123999999999995,
+      "wall_seconds": 25.184004111913964,
+      "inference_calls": 111,
+      "inference_ms_mean": 0.6813979279279279,
+      "inference_ms_max": 6.075171,
+      "origin_odom": [
+        1.8777826179824955,
+        1.3812656542795267,
+        -0.9643215437724761
+      ],
+      "origin_truth": [
+        2.800000084484886,
+        -0.5000000333015301,
+        2.799999896452224
+      ]
+    },
+    {
+      "name": "check_c",
+      "start": [
+        0.7,
+        0.2,
+        -2.1
+      ],
+      "goal": [
+        3.0,
+        2.0
+      ],
+      "observation": "odometry_axle",
+      "success": true,
+      "error": null,
+      "final_true_distance_m": 0.15985388084911872,
+      "final_odom_linear_mps": 0.0,
+      "final_odom_angular_radps": 0.0,
+      "sim_seconds": 16.634,
+      "wall_seconds": 38.41015857597813,
+      "inference_calls": 156,
+      "inference_ms_mean": 0.7617088910256413,
+      "inference_ms_max": 10.529388,
+      "origin_odom": [
+        -0.39678292076848704,
+        -0.2767520440718598,
+        -2.6136920032739113
+      ],
+      "origin_truth": [
+        0.7000001793937767,
+        0.20000030673530478,
+        -2.100000000000002
+      ]
+    }
+  ],
+  "successes": 3,
+  "completed_trials": 3
+}

@@ -1,0 +1,82 @@
+{
+  "criteria": {
+    "true_goal_radius_m": 0.25,
+    "controller_stop_radius_m": 0.2,
+    "max_final_linear_mps": 0.03,
+    "max_final_angular_radps": 0.03,
+    "max_sim_seconds": 45.0,
+    "max_wall_seconds": 180.0,
+    "stop_hold_sim_seconds": 1.0,
+    "control_period_sim_seconds": 0.1
+  },
+  "trials": [
+    {
+      "name": "check_a",
+      "start": [
+        0.5,
+        1.5,
+        -1.2
+      ],
+      "goal": [
+        3.0,
+        2.0
+      ]
+    },
+    {
+      "name": "check_b",
+      "start": [
+        2.8,
+        -0.5,
+        2.8
+      ],
+      "goal": [
+        3.0,
+        2.0
+      ]
+    },
+    {
+      "name": "check_c",
+      "start": [
+        0.7,
+        0.2,
+        -2.1
+      ],
+      "goal": [
+        3.0,
+        2.0
+      ]
+    }
+  ],
+  "suite": "check",
+  "observation": "odometry_axle",
+  "axle_center_in_model_xy_m": [
+    0.5542825,
+    0.0
+  ],
+  "simulator_processes": [
+    {
+      "name": "gazebo",
+      "pid": 3867,
+      "start_ticks": "108730048",
+      "headless": true
+    },
+    {
+      "name": "bridge",
+      "pid": 3868,
+      "start_ticks": "108730049",
+      "headless": true
+    }
+  ],
+  "model_sha256": "fa0ba22da8d10f839862cd06157fed283af6209e72b5f6b9bb2e7b2b2887a6b4",
+  "control": "Learned velocity policy using odometry_axle",
+  "evaluation": "Gazebo model pose distance. In sim_pose mode this is also the control observation; perfect simulated localization is assumed.",
+  "non_ai": [
+    "pose setup",
+    "odometry alignment",
+    "speed bounds",
+    "goal threshold",
+    "stop hold",
+    "watchdogs"
+  ],
+  "limits": "3 designed starts, one goal, no obstacles. Not evidence of broad navigation generalization."
+}

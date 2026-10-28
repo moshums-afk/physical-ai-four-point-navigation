@@ -1,0 +1,100 @@
+{
+  "criteria": {
+    "true_goal_radius_m": 0.25,
+    "controller_stop_radius_m": 0.2,
+    "max_final_linear_mps": 0.03,
+    "max_final_angular_radps": 0.03,
+    "max_sim_seconds": 45.0,
+    "max_wall_seconds": 180.0,
+    "stop_hold_sim_seconds": 1.0,
+    "control_period_sim_seconds": 0.1
+  },
+  "trials": [
+    {
+      "name": "diagonal",
+      "start": [
+        1.0,
+        1.0,
+        0.0
+      ],
+      "goal": [
+        3.0,
+        2.0
+      ]
+    },
+    {
+      "name": "longer",
+      "start": [
+        1.0,
+        0.0,
+        0.7
+      ],
+      "goal": [
+        3.0,
+        2.0
+      ]
+    },
+    {
+      "name": "turn_left",
+      "start": [
+        2.0,
+        0.0,
+        -0.8
+      ],
+      "goal": [
+        3.0,
+        2.0
+      ]
+    },
+    {
+      "name": "behind",
+      "start": [
+        1.0,
+        2.0,
+        2.4
+      ],
+      "goal": [
+        3.0,
+        2.0
+      ]
+    },
+    {
+      "name": "turn_right",
+      "start": [
+        2.0,
+        1.0,
+        -2.4
+      ],
+      "goal": [
+        3.0,
+        2.0
+      ]
+    }
+  ],
+  "simulator_processes": [
+    {
+      "name": "gazebo",
+      "pid": 2791,
+      "start_ticks": "106398197",
+      "headless": true
+    },
+    {
+      "name": "bridge",
+      "pid": 2792,
+      "start_ticks": "106398197",
+      "headless": true
+    }
+  ],
+  "model_sha256": "fa0ba22da8d10f839862cd06157fed283af6209e72b5f6b9bb2e7b2b2887a6b4",
+  "control": "Learned velocity policy using odometry; one-time world pose alignment per trial",
+  "evaluation": "Gazebo world pose distance, independent of wheel odometry",
+  "non_ai": [
+    "pose setup",
+    "odometry alignment",
+    "speed bounds",
+    "goal threshold",
+    "stop hold",
+    "watchdogs"
+  ],
+  "limits": "Five designed starts, one goal, no obstacles. Not evidence of broad navigation generalization."
+}

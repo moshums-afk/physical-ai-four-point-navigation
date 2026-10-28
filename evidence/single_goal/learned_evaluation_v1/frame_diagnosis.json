@@ -1,0 +1,34 @@
+{
+  "axle_center_in_model_xy_m": [
+    0.5542825,
+    0.0
+  ],
+  "note": "Final stationary rows only; geometry-derived correction",
+  "trials": [
+    {
+      "name": "diagonal",
+      "position_error_before_m": 0.2820925745162099,
+      "position_error_after_m": 0.00010328690317314908
+    },
+    {
+      "name": "longer",
+      "position_error_before_m": 0.05194795908094407,
+      "position_error_after_m": 2.1426362968812414e-05
+    },
+    {
+      "name": "turn_left",
+      "position_error_before_m": 0.9258266713329103,
+      "position_error_after_m": 0.0002456075015137873
+    },
+    {
+      "name": "behind",
+      "position_error_before_m": 1.047079313353173,
+      "position_error_after_m": 0.00027279662898990433
+    },
+    {
+      "name": "turn_right",
+      "position_error_before_m": 1.1081491161440775,
+      "position_error_after_m": 0.00036894320168280706
+    }
+  ]
+}

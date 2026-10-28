@@ -1,0 +1,67 @@
+{
+  "route": {
+    "name": "four_points_v1",
+    "start": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "goals": [
+      [
+        1.5,
+        0.0
+      ],
+      [
+        1.5,
+        1.5
+      ],
+      [
+        0.0,
+        1.5
+      ],
+      [
+        0.0,
+        3.0
+      ]
+    ]
+  },
+  "criteria": {
+    "switch_radius_m": 0.2,
+    "true_goal_radius_m": 0.25,
+    "stop_hold_sim_seconds": 1.0,
+    "max_final_linear_mps": 0.03,
+    "max_final_angular_radps": 0.03,
+    "max_sim_seconds": 120.0,
+    "max_wall_seconds": 360.0,
+    "control_period_sim_seconds": 0.1
+  },
+  "observation": "odometry_axle",
+  "model_sha256": "fa0ba22da8d10f839862cd06157fed283af6209e72b5f6b9bb2e7b2b2887a6b4",
+  "world_sha256": "30bd84398647565e051c10b2d8e617c8272dbce13c11d76db2c17c4dc7f432a0",
+  "simulator_processes": [
+    {
+      "name": "gazebo",
+      "pid": 712,
+      "start_ticks": "179022",
+      "headless": true,
+      "waypoints": true
+    },
+    {
+      "name": "bridge",
+      "pid": 713,
+      "start_ticks": "179023",
+      "headless": true,
+      "waypoints": true
+    }
+  ],
+  "ai": "Saved PyTorch-trained neural policy, NumPy inference; linear m/s and angular rad/s velocity",
+  "non_ai": [
+    "one initial pose reset/alignment",
+    "ordered waypoint switching",
+    "final stop",
+    "speed limits",
+    "watchdogs"
+  ],
+  "evaluation": "Gazebo model pose at each transition and after final stop",
+  "limits": "One declared route, no obstacles. Separate task from single-goal trials."
+}

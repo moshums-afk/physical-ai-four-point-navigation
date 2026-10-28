@@ -1,0 +1,2 @@
+# Optional local CPU inspection/inference; ROS/Gazebo are provided by Docker.
+numpy==1.24.4
