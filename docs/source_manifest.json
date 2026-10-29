@@ -3,7 +3,7 @@
   "model_sha256": "fa0ba22da8d10f839862cd06157fed283af6209e72b5f6b9bb2e7b2b2887a6b4",
   "recorded_world_sha256": "81722aaf93360533b62c3deefa7ea6a22230a3053b1f9f9b9b301da5cdcc5aab",
   "scene_changes": "Only XML attribution comments were added to packaged SDF/GUI files. Geometry and settings are unchanged.",
-  "report_status": "Submission PDF prepared; repository content upload and OmniCampus submission pending.",
+  "report_status": "Revised authorship disclosure and first-person report prepared; updated documentation publication and OmniCampus submission pending.",
   "copied_files": [
     {
       "path": "final_project/diff_drive_smoke/benchmark.py",
@@ -464,14 +464,14 @@
     "docs/report.md": {
       "date": "2026-10-29",
       "base_packaged_sha256": "fd8489810607d5aa1d15e0ba5bf8f67a6396fb419959e3cae4bd813d36ce7f38",
-      "sha256": "4199af60ebff5be0937a3dd74332f6181f844201db25dea63d3b24bbbc7d51d0",
-      "reason": "Prepare submission report with confirmed ID88589 and both destination URLs."
+      "sha256": "60085db7e8fe9fd5103c75dee8e570cbe37a612aac7945509e2508a6c9576a9d",
+      "reason": "Clarify generative AI assistance, learner-led hands-on execution and the separate imitation-learning driving policy; preserve measured results."
     },
     "docs/report.pdf": {
       "date": "2026-10-29",
       "base_packaged_sha256": "d2c64814a270d7f7ec2985747974837d8310ddd6611645437af5ed806b33e34e",
-      "sha256": "773da701746dfce3b0218d14451d044b7706cae202cdaf1e57a048f77f318d30",
-      "reason": "Prepare submission report with confirmed ID88589 and both destination URLs."
+      "sha256": "9361ef4eb8e6482b0d96e2871aec25a9199d0ffe11f704c13a2b68b818b56086",
+      "reason": "Clarify generative AI assistance, learner-led hands-on execution and the separate imitation-learning driving policy; preserve measured results."
     }
   },
   "report_file": "docs/report.pdf",
@@ -481,9 +481,20 @@
     "video_url": "https://youtu.be/YEbQuHdJQwY",
     "pdf_filename": "説明資料_PAI最終課題_ID88589.pdf",
     "repository_public_confirmed": true,
-    "repository_files_uploaded": false,
+    "repository_files_uploaded": true,
     "video_visibility": "unlisted",
     "video_duration_seconds": 102,
-    "video_title_needs_underscore": true
-  }
+    "video_title_needs_underscore": false,
+    "previous_verified_public_commit": "cffe7900ee8562692e7f6c65ea0ecbbe6740a22c",
+    "documentation_update_pending": true
+  },
+  "document_revision_history": [
+    {
+      "date": "2026-10-29",
+      "previous_verified_public_commit": "cffe7900ee8562692e7f6c65ea0ecbbe6740a22c",
+      "previous_report_sha256": "773da701746dfce3b0218d14451d044b7706cae202cdaf1e57a048f77f318d30",
+      "previous_markdown_sha256": "4199af60ebff5be0937a3dd74332f6181f844201db25dea63d3b24bbbc7d51d0",
+      "reason": "Disclose generative AI support and describe learner-led execution, verification and document review in first person; distinguish the learned driving policy from the generative AI assistant."
+    }
+  ]
 }
